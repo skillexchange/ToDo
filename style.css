@@ -1,0 +1,45 @@
+@charset "utf-8";
+
+body {
+  background: url(./background.png);
+}
+
+span {
+  color: ebebeb;
+}
+
+#content {
+	width: 100%;
+	margin-left: 30px;
+}
+
+#header {
+	height: 100px;
+  margin-top: 30px;
+	text-align: left;
+}
+
+#create_todo {
+
+}
+
+
+#todo_list {
+  color: d1d1d1;
+}
+
+
+#completed_list {
+
+}
+
+
+
+#footer {
+
+}
+
+
+
+
+ 
