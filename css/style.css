@@ -14,22 +14,24 @@ body {
 	height: 100px;
   margin-top: 30px;
 	text-align: left;
+  color: #6b6b6b;
 }
 
 #header span {
   color: #ebebeb;
 }
 
-#header h1 {
-  color: gray;
-}
-
 #create_todo {
-
 }
 
-#todo_list {
+#todo_list li {
+  max-width: 300px;
+  color: #d1d1d1;
+  background-color: #1b1b1b;
+}
 
+#todo_list span {
+  text-align: center;
 }
 
 #todo_list p {
