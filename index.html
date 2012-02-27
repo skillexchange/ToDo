@@ -11,15 +11,23 @@
     $(function(){
     // Hide's JavaScript Code 
 
+    // create todo - add todo to the list 
       $("#submit").bind("click", function(){
         var text = $("#task_text input").val();
         var year = $("#t_year").val();
         var month = $("#t_month").val();
         var day = $("#t_day").val();
-        var new_task = $("<li>"+text+" --- "+"<span>"+year+"/"+month+"/"+day+"</span>"+"</li>");
-      $("#new_todo").append(new_task);
-      new_task.fadeIn(1000);
+
+        var new_task = $("<li>"+text+" --- "+"<span>"+year+"/"+month+"/"+day+"</span>"+' [<a href="#" class="comp">done!</a>]'+"</li>");
+        
+        $(".comp",new_task).bind("click", function(){
+        $("#completed_list ul").append("<li>"+text+" --- "+"<span>"+year+"/"+month+"/"+day+"</span>"+"</li>");
+        new_task.remove();
+        }); 
+        
+        $("#todo_list ul").append(new_task);
       });
+   
     });
   </script>
 </head>
@@ -93,20 +101,13 @@
     
         <div id="todo_list">
             <p>ToDo:</p>
-            <ul id="new_todo" type="circle">
-              <li>ToDo A <span>2012/2/14</span></li>
-              <li>ToDo B <span>2012/2/16</span></li>
-              <li>ToDo C <span>2012/2/17</span></li>
-              <li>ToDo D <span>2012/2/25</span></li>
+            <ul>
             </ul>
         </div><!-- #todo_list -->
     
         <div id="completed_list">
             <p>Completed:</p>
             <ul>
-                <li>ToDo X | 2012/1/14</li>
-                <li>ToDo Y | 2012/1/16</li>
-                <li>ToDo Z | 2012/1/17</li>
             </ul>
         </div><!-- #completed_list -->
     </div><!-- #content -->

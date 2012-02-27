@@ -25,9 +25,13 @@ body {
 }
 
 #todo_list li {
-  max-width: 300px;
+  max-width: 500px;
   color: #d1d1d1;
   background-color: #1b1b1b;
+}
+
+#todo_list span {
+  font-size: 75%;
 }
 
 #todo_list span {
@@ -40,6 +44,10 @@ body {
 
 #completed_list {
   color: #d1d1d1;
+}
+
+#completed_list {
+  font-size: 75%;
 }
 
 #footer {
