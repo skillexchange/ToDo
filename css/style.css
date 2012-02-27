@@ -21,9 +21,6 @@ body {
   color: #ebebeb;
 }
 
-#create_todo {
-}
-
 #todo_list li {
   max-width: 500px;
   color: #d1d1d1;
@@ -34,10 +31,6 @@ body {
   font-size: 75%;
 }
 
-#todo_list span {
-  text-align: center;
-}
-
 #todo_list p {
   font-size: 150%;
 }
@@ -46,7 +39,11 @@ body {
   color: #d1d1d1;
 }
 
-#completed_list {
+#completed_list li {
+  font-size: 90%;
+}
+
+#completed_list span {
   font-size: 75%;
 }
 
