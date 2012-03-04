@@ -18,10 +18,10 @@
         var month = $("#t_month").val();
         var day = $("#t_day").val();
 
-        var new_task = $("<li>"+text+" --- "+"<span>"+year+"/"+month+"/"+day+"</span>"+' [<a href="#" class="comp">done!</a>]'+"</li>");
+        var new_task = $("<li>"+text+"     "+"<span>"+year+"/"+month+"/"+day+"  "+"</span>"+'<a href="#" class="comp">×</a>'+"</li>");
         
         $(".comp",new_task).bind("click", function(){
-        $("#completed_list ul").append("<li>"+text+" --- "+"<span>"+year+"/"+month+"/"+day+"</span>"+"</li>");
+        $("#completed_list ul").append("<li>"+text+"     "+"<span>"+year+"/"+month+"/"+day+"</span>"+"</li>");
         new_task.remove();
         }); 
         

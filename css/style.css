@@ -23,6 +23,7 @@ body {
 
 #todo_list li {
   max-width: 500px;
+  white-space: pre;
   color: #d1d1d1;
   background-color: #1b1b1b;
 }
@@ -41,6 +42,7 @@ body {
 
 #completed_list li {
   font-size: 90%;
+  white-space: pre;
 }
 
 #completed_list span {
