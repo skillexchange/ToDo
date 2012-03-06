@@ -21,14 +21,22 @@ body {
   color: #ebebeb;
 }
 
+#todo_list ul {
+  list-style: none;
+}
+
 #todo_list li {
   max-width: 500px;
   white-space: pre;
   color: #d1d1d1;
   background-color: #1b1b1b;
+  position:relative;
 }
 
-#todo_list span {
+#todo_list .ymd {
+  position: absolute;
+  top: 3px;
+  right: 3px; 
   font-size: 75%;
 }
 
