@@ -18,10 +18,10 @@
         var month = $("#t_month").val();
         var day = $("#t_day").val();
 
-        var new_task = $('<li>'+'<a href="#" class="comp">□</a>'+'<span class="task">'+text+'</span>'+'<span class="ymd">'+year+'/'+month+'/'+day+'</span>'+'</li>');
+        var new_task = $('<li>'+'<input class="comp" type="checkbox"></input>'+'<span class="task">'+text+'</span>'+'<span class="ymd">'+year+'/'+month+'/'+day+'</span>'+'</li>');
         
         $(".comp",new_task).bind("click", function(){
-        $("#completed_list ul").append("<li>"+text+"     "+"<span>"+year+"/"+month+"/"+day+"</span>"+"</li>");
+        $("#completed_list ul").append('<li>'+'<input type="checkbox" checked></input>'+'<span class="task">'+text+'</span>'+'<span class="ymd">'+year+'/'+month+'/'+day+'</span>'+'</li>');
         new_task.remove();
         }); 
         
