@@ -12,6 +12,8 @@
     // Hide's JavaScript Code 
 
     // manage todo - create & complete todo
+      var i = 0; 
+      
       $("#submit").bind("click", function(){
         var text = $("#task_text input").val();
         var year = $("#t_year").val();
@@ -20,6 +22,10 @@
 
         var new_task = $('<li>'+'<input class="comp" type="checkbox"></input>'+'<span class="task">'+text+'</span>'+'<span class="ymd">'+year+'/'+month+'/'+day+'</span>'+'</li>');
         
+        var new_id = i;
+        i++;
+        console.log(i);
+
         $(".comp",new_task).bind("click", function(){
         $("#completed_list ul").append('<li>'+'<input type="checkbox" checked></input>'+'<span class="task">'+text+'</span>'+'<span class="ymd">'+year+'/'+month+'/'+day+'</span>'+'</li>');
         new_task.remove();
