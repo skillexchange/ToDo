@@ -13,6 +13,8 @@
 
     // manage todo - create & complete todo
       var i = 0; 
+      var task_array = [ ];
+      console.log(task_array);
       
       $("#submit").bind("click", function(){
         var text = $("#task_text input").val();
@@ -20,20 +22,21 @@
         var month = $("#t_month").val();
         var day = $("#t_day").val();
 
-        var new_task = $('<li>'+'<input class="comp" type="checkbox"></input>'+'<span class="task">'+text+'</span>'+'<span class="ymd">'+year+'/'+month+'/'+day+'</span>'+'</li>');
-        
         var new_id = i;
         i++;
         console.log(i);
 
-        $(".comp",new_task).bind("click", function(){
+        var new_task = $('<li>'+'<input class="comp" type="checkbox"></input>'+'<span class="task">'+i+' - '+text+'</span>'+'<span class="ymd">'+year+'/'+month+'/'+day+'</span>'+'</li>');
+        
+               $(".comp",new_task).bind("click", function(){
         $("#completed_list ul").append('<li>'+'<input type="checkbox" checked></input>'+'<span class="task">'+text+'</span>'+'<span class="ymd">'+year+'/'+month+'/'+day+'</span>'+'</li>');
         new_task.remove();
         }); 
         
         $("#todo_list ul").append(new_task);
+        task_array[new_id] = new_task;
+        console.log(task_array);
       });
-   
     });
   </script>
 </head>
