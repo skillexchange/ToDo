@@ -14,7 +14,6 @@
     // manage todo - create & complete todo
       var i = 0; 
       var task_array = [ ];
-      console.log(task_array);
       
       $("#submit").bind("click", function(){
         var text = $("#task_text input").val();
@@ -28,8 +27,8 @@
 
         var new_task = $('<li>'+'<input class="comp" type="checkbox"></input>'+'<span class="task">'+i+' - '+text+'</span>'+'<span class="ymd">'+year+'/'+month+'/'+day+'</span>'+'</li>');
         
-               $(".comp",new_task).bind("click", function(){
-        $("#completed_list ul").append('<li>'+'<input type="checkbox" checked></input>'+'<span class="task">'+text+'</span>'+'<span class="ymd">'+year+'/'+month+'/'+day+'</span>'+'</li>');
+        $(".comp",new_task).bind("click", function(){
+        $("#completed_list ul").append('<li>'+'<input type="checkbox" checked></input>'+'<span class="task">'+i+' - '+text+'</span>'+'<span class="ymd">'+year+'/'+month+'/'+day+'</span>'+'</li>');
         new_task.remove();
         }); 
         
@@ -37,6 +36,16 @@
         task_array[new_id] = new_task;
         console.log(task_array);
       });
+      
+      $("#sort_ascend").bind("click", function(){
+        task_array.sort();
+        console.log(task_array);
+      });  
+      $("#sort_descend").bind("click", function(){
+        task_array.reverse();
+        console.log(task_array);
+      });
+
     });
   </script>
 </head>
@@ -109,9 +118,10 @@
         </div><!-- #create_todo --> 
     
         <div id="todo_list">
-            <p>ToDo:</p>
-            <ul>
-            </ul>
+          <p>ToDo:</p>
+          <p><span id=sort_ascend>↑　</span><span id=sort_descend>↓</span></p>
+          <ul>
+          </ul>
         </div><!-- #todo_list -->
     
         <div id="completed_list">
