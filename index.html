@@ -39,10 +39,18 @@
       
       $("#sort_ascend").bind("click", function(){
         task_array.sort();
-        console.log(task_array);
+        $("#todo_list ul").empty();
+        for(var i=0; i<task_array.length; i++){
+          $("#todo_list ul").append(task_array[i]);
+        }
+       console.log(task_array);
       });  
       $("#sort_descend").bind("click", function(){
         task_array.reverse();
+        $("#todo_list ul").empty();
+        for(var i=0; i<task_array.length; i++){
+          $("#todo_list ul").append(task_array[i]);
+        }
         console.log(task_array);
       });
 
